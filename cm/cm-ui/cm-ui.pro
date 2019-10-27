@@ -4,7 +4,8 @@ TEMPLATE = app
 
 CONFIG += c++14
 
-INCLUDEPATH += source
+INCLUDEPATH += source \
+    ../cm-lib/source
 
 SOURCES += source/main.cpp
 
