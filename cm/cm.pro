@@ -1,3 +1,5 @@
+message(cm project dir: $${PWD})
+
 TEMPLATE = subdirs
 
 SUBDIRS += \
