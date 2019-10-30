@@ -2,6 +2,8 @@
 #define MASTERCONTROLLER_H
 
 #include <QObject>
+#include <QScopedPointer>
+#include <QString>
 
 #include <cm-lib_global.h>
 
@@ -11,12 +13,17 @@ namespace controllers {
 class CMLIB_EXPORT MasterController : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY( QString ui_welcomeMessage MEMBER welcomeMessage CONSTANT )
+    Q_PROPERTY( QString ui_welcomeMessage READ welcomeMessage CONSTANT )
 
 public:
     explicit MasterController(QObject *parent = nullptr);
+    ~MasterController();
 
-    QString welcomeMessage = "This is MasterController to Major Tom";
+    const QString& welcomeMessage() const;
+
+private:
+    class Implementation;
+    QScopedPointer<Implementation> implementation;
 };
 
 }}
