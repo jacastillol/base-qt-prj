@@ -23,13 +23,43 @@ Window {
 
     StackView {
         id: contentFrame
-        anchors.fill: parent
+        clip: true
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            right: parent.right
+            left: navigationBar.right
+        }
         initialItem: Qt.resolvedUrl("qrc:/views/SplashView.qml")
     }
 
-    Button {
-        text: masterController.ui_welcomeMessage
-        onClicked: contentFrame.replace("qrc:/views/CreateClientView.qml")
+    Rectangle {
+        id: navigationBar
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            left: parent.left
+        }
+        width: 100
+        color: "#000000"
+
+        Column {
+            Button {
+                text: "Dashboard"
+                onClicked:
+                    masterController.ui_navigationController.goDashboardView()
+            }
+            Button {
+                text: "New Client"
+                onClicked:
+                    masterController.ui_navigationController.goCreateClientView()
+            }
+            Button {
+                text: "Find Client"
+                onClicked:
+                    masterController.ui_navigationController.goFindClientView()
+            }
+        }
     }
 
     Component.onCompleted:
