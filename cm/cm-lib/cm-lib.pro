@@ -17,6 +17,7 @@ SOURCES += source/models/client.cpp\
 
 
 HEADERS += source/cm-lib_global.h \
+    source/controllers/navigation-controller.h \
     source/models/client.h \
     source/controllers/master-controller.h
 
