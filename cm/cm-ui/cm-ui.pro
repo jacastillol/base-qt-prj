@@ -11,10 +11,11 @@ INCLUDEPATH += source \
 
 SOURCES += source/main.cpp
 
-RESOURCES += views.qrc
+RESOURCES += views.qrc \
+    assets.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH = $$PWD
+QML_IMPORT_PATH += $$PWD
 
 include(../qmake-target-platform.pri)
 include(../qmake-destination-path.pri)
@@ -26,3 +27,7 @@ RCC_DIR = $$PWD/build/$$DESTINATION_PATH/.qrc
 UI_DIR = $$PWD/build/$$DESTINATION_PATH/.ui
 
 LIBS += -L$$PWD/../binaries/$$DESTINATION_PATH -lcm-lib
+
+DISTFILES += \
+    assets/Style.qml \
+    assets/qmldir
