@@ -24,6 +24,10 @@ Window {
             contentFrame.replace("qrc:/views/FindClientView.qml")
     }
 
+    NavigationBar {
+        id: navigationBar
+    }
+
     StackView {
         id: contentFrame
         clip: true
@@ -34,36 +38,6 @@ Window {
             left: navigationBar.right
         }
         initialItem: Qt.resolvedUrl("qrc:/views/SplashView.qml")
-    }
-
-    Rectangle {
-        id: navigationBar
-        anchors {
-            top: parent.top
-            bottom: parent.bottom
-            left: parent.left
-        }
-        width: 100
-        color: "#000000"
-
-        Column {
-            NavigationButton {
-                iconCharacter: "\uf0c9"
-                description: ""
-            }
-            NavigationButton {
-                iconCharacter: "\uf015"
-                description: "Dashboard"
-            }
-            NavigationButton {
-                iconCharacter: "\uf234"
-                description: "New Client"
-            }
-            NavigationButton {
-                iconCharacter: "\uf002"
-                description: "Find Client"
-            }
-        }
     }
 
     Component.onCompleted:
