@@ -2,6 +2,9 @@ import QtQuick 2.13
 import QtQuick.Window 2.13
 import QtQuick.Controls 2.12
 
+import assets 1.0
+import components 1.0
+
 Window {
     visible: true
     width: 640
@@ -44,20 +47,31 @@ Window {
         color: "#000000"
 
         Column {
-            Button {
-                text: "Dashboard"
-                onClicked:
-                    masterController.ui_navigationController.goDashboardView()
+            Text {
+                font {
+                    family: Style.fontAwesome
+                    pixelSize: 42
+                }
+                color: "#ffffff"
+                text: "\uf0c9"
             }
-            Button {
-                text: "New Client"
-                onClicked:
-                    masterController.ui_navigationController.goCreateClientView()
+            Text {
+                font {
+                    family: Style.fontAwesome
+                    pixelSize: 42
+                }
+                color: "#ffffff"
+                text: "\uf015"
             }
-            Button {
-                text: "Find Client"
-                onClicked:
-                    masterController.ui_navigationController.goFindClientView()
+            NavigationButton {
+            }
+            Text {
+                font {
+                    family: Style.fontAwesome
+                    pixelSize: 42
+                }
+                color: "#ffffff"
+                text: "\uf002"
             }
         }
     }
