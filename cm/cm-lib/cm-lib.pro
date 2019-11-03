@@ -15,12 +15,14 @@ INCLUDEPATH += source
 SOURCES += source/models/client.cpp\
     source/controllers/command-controller.cpp \
     source/controllers/master-controller.cpp \
+    source/data/data-decorator.cpp \
     source/framework/command.cpp
 
 
 HEADERS += source/cm-lib_global.h \
     source/controllers/command-controller.h \
     source/controllers/navigation-controller.h \
+    source/data/data-decorator.h \
     source/framework/command.h \
     source/models/client.h \
     source/controllers/master-controller.h
