@@ -8,7 +8,7 @@ Item {
         top: parent.top
         bottom: parent.bottom
         left: parent.left
-        }
+    }
     width: isCollapsed ?
                Style.widthNavigationBarCollapsed :
                Style.heightNavigationBarExpanded

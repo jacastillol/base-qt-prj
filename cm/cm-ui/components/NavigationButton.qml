@@ -30,6 +30,8 @@ Item {
                 }
                 color: Style.colourNavigationBarFont
                 text: "\uf11a"
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
             }
             Text {
                 id: textDescription
@@ -37,6 +39,8 @@ Item {
                 height: Style.heightNavigationButtonDescription
                 color: Style.colourNavigationBarFont
                 text: "SET ME!!"
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: Style.pixelSizeNavigationBarText
             }
         }
 
