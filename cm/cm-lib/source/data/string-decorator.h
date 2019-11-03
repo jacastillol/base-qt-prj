@@ -26,7 +26,7 @@ public:
             const QString& key = "SomeItemKey",
             const QString& label = "",
             const QString& value = "");
-    ~StringDecorator();
+    ~StringDecorator() override;
 
     StringDecorator& setValue(const QString& value);
     const QString& value() const;

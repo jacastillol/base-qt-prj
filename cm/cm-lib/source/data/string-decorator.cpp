@@ -1,8 +1,10 @@
 #include "string-decorator.h"
 
 #include <QVariant>
+
 namespace cm {
 namespace data {
+
 class StringDecorator::Implementation
 {
 public:
