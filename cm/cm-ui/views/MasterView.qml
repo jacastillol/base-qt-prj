@@ -47,31 +47,21 @@ Window {
         color: "#000000"
 
         Column {
-            Text {
-                font {
-                    family: Style.fontAwesome
-                    pixelSize: 42
-                }
-                color: "#ffffff"
-                text: "\uf0c9"
-            }
-            Text {
-                font {
-                    family: Style.fontAwesome
-                    pixelSize: 42
-                }
-                color: "#ffffff"
-                text: "\uf015"
+            NavigationButton {
+                iconCharacter: "\uf0c9"
+                description: ""
             }
             NavigationButton {
+                iconCharacter: "\uf015"
+                description: "Dashboard"
             }
-            Text {
-                font {
-                    family: Style.fontAwesome
-                    pixelSize: 42
-                }
-                color: "#ffffff"
-                text: "\uf002"
+            NavigationButton {
+                iconCharacter: "\uf234"
+                description: "New Client"
+            }
+            NavigationButton {
+                iconCharacter: "\uf002"
+                description: "Find Client"
             }
         }
     }
