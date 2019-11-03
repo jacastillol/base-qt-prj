@@ -7,6 +7,9 @@ import assets 1.0
 Item {
     property alias iconCharacter: textIcon.text
     property alias description: textDescription.text
+    property color hoverColour: Style.colourNavigationBarBackground
+
+    signal navigationButtonClicked()
 
     width: Style.widthNavigationButton
     height: Style.heightNavigationButton
@@ -36,5 +39,24 @@ Item {
                 text: "SET ME!!"
             }
         }
+
+        MouseArea {
+            anchors.fill: parent
+            cursorShape: Qt.PointingHandCursor
+            hoverEnabled: true
+            onEntered: background.state = "hover"
+            onExited: background.state = ""
+            onClicked: navigationButtonClicked()
+        }
+
+        states: [
+            State {
+                name: "hover"
+                PropertyChanges {
+                    target: background
+                    color: hoverColour
+                }
+            }
+        ]
     }
 }
