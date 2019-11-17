@@ -10,14 +10,18 @@ CONFIG += c++14
 CONFIG += console
 CONFIG -= app_bundle
 
-INCLUDEPATH += source
+INCLUDEPATH += source \
+    ../cm-lib/source
 
 SOURCES += source/models/client-tests.cpp \
+    source/controllers/master-controller-tests.cpp \
     source/main.cpp \
     source/test-suite.cpp
 
 include(../qmake-target-platform.pri)
 include(../qmake-destination-path.pri)
+
+LIBS += -L$$PWD/../binaries/$$DESTINATION_PATH -lcm-lib
 
 DESTDIR = $$PWD/../binaries/$$DESTINATION_PATH
 OBJECTS_DIR = $$PWD/build/$$DESTINATION_PATH/.obj
@@ -26,4 +30,5 @@ RCC_DIR = $$PWD/build/$$DESTINATION_PATH/.qrc
 UI_DIR = $$PWD/build/$$DESTINATION_PATH/.ui
 
 HEADERS += \
+    source/controllers/master-controller-tests.h \
     source/test-suite.h
