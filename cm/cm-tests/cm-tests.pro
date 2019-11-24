@@ -16,6 +16,7 @@ INCLUDEPATH += source \
 SOURCES += source/models/client-tests.cpp \
     source/controllers/master-controller-tests.cpp \
     source/data/int-decorator-tests.cpp \
+    source/data/string-decorator-tests.cpp \
     source/main.cpp \
     source/test-suite.cpp
 
@@ -33,4 +34,5 @@ UI_DIR = $$PWD/build/$$DESTINATION_PATH/.ui
 HEADERS += \
     source/controllers/master-controller-tests.h \
     source/data/int-decorator-tests.h \
+    source/data/string-decorator-tests.h \
     source/test-suite.h
